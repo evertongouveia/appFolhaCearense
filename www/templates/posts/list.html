@@ -1,0 +1,31 @@
+<ion-view view-title="Folha Cearense">
+  <ion-content lazy-scroll>
+  <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+  
+	<!-- Template 'cards-list' -->
+	<div ng-if="posts" class="card" ng-repeat="post in posts track by $index" ng-click="gotoPost(post.id)">
+	
+	  <div class="item item-body list-template">
+	    <img ng-hide="loadImages == false" src="{{post.better_featured_image.media_details.sizes.thumbnail.source_url}}">
+		<h4 ng-bind-html="post.title.rendered"></h4>
+		<h6 ng-if="post.pure_taxonomies.categories[0].name" class="icon ion-stop {{color}}">Postado por <span am-time-ago="post.date"></span> em {{post.pure_taxonomies.categories[0].name}}</h6>
+	  </div>
+	  
+	</div>
+	
+  	<div ng-show="!posts" class="background-view">
+	  <div class="results">
+		<i class="icon ion-android-arrow-up"></i>
+		<h4 class="no-data">Dados ainda não carregados<br>Puxe para atualizar</h4>
+	  </div>
+	</div>
+	
+	<ion-infinite-scroll
+	ng-if="moreDataExists()"
+    on-infinite="loadMore()"
+    distance="1%"
+    immediate-check="false">
+  </ion-infinite-scroll>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view view-title="Configurações">
+  <ion-content>
+	<div class="list">
+        <div class="item item-divider"> 
+          Configurações
+        </div>
+		<div class="item item-toggle">
+	     Notificações
+	     <label class="toggle toggle-{{color}}">
+	       <input type="checkbox" ng-model="pushNotification.checked" ng-change="pushNotificationChange()">
+		   <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+		</div>
+		<div class="item item-toggle">
+	     Mostrar imagens
+	     <label class="toggle toggle-{{color}}">
+	       <input type="checkbox" ng-model="loadImages.checked" ng-change="loadImagesChange()">
+		   <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+		</div>		
+        <div class="item item-divider"> 
+          Opções
+        </div>
+		<div class="item option" ng-click="rateApp()">
+		 <span class="title">Avalie este aplicativo</span>
+		</div>
+		<!--div class="item option" ng-click="feedback()">
+		 <span class="title">Enviar Feedback</span>
+		</div>
+		<div class="item option" ng-click="sendSMS()">
+		 <span class="title">Send SMS</span>
+		</div-->			
+	</div>    
+  </ion-content>
+</ion-view>
