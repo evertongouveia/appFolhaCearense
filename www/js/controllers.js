@@ -45,7 +45,7 @@ angular.module('WordApp.controllers', [])
             $log.error('error', response);
             $timeout(function() {
                 $ionicLoading.hide();
-                window.plugins.toast.show('Sorry, no data response. Please verify your connection and pull to refresh page.', '8000', 'center', function(a) {}, function(b) {});
+                window.plugins.toast.show('Desculpe, nenhuma resposta de dados. Verifique sua conexão e puxe para atualizar a página.', '8000', 'center', function(a) {}, function(b) {});
             }, 8000);
         });
 
@@ -107,7 +107,7 @@ angular.module('WordApp.controllers', [])
     }
 
 
-    // Font decrease/increase 
+    // Font decrease/increase
     $scope.vm = {
         fontSize: 14
     }
@@ -124,7 +124,7 @@ angular.module('WordApp.controllers', [])
     $scope.fontAdjust = function() {
         var popup = $ionicPopup.show({
             template: '<text-size-slider min="10" max="18" unit="px" value="vm.fontSize" step="0"></text-size-slider>',
-            title: 'Font adjustment',
+            title: 'Ajuste o tamanho da fonte',
             scope: $scope,
             buttons: [{
                 text: '<b>OK</b>',
@@ -255,10 +255,10 @@ angular.module('WordApp.controllers', [])
             'postId': +postid
         });
     };
-	
+
     // Show Posts from All Categories
     var postsApi = WORDPRESS_API_URL + 'posts';
-	
+
 	// Include Posts from Categories IDs, don't forget make changes in CategoriesCtrl
     //var categoriesApi = WORDPRESS_API_URL + 'posts?filter[cat]=1,2,3';
 
@@ -354,10 +354,10 @@ angular.module('WordApp.controllers', [])
 
 .controller('CategoriesCtrl', function($scope, $http, DataLoader, $ionicLoading, $timeout, $ionicSlideBoxDelegate, WORDPRESS_API_URL, IONIC_APP_COLOR, $log) {
     $scope.color = IONIC_APP_COLOR;
-	
+
     // Show All Categories
     var categoriesApi = WORDPRESS_API_URL + 'categories';
-	
+
 	// Include Categories IDs, don't forget make changes in PostsCtrl
     //var categoriesApi = WORDPRESS_API_URL + 'categories?include=1,2,3';
 

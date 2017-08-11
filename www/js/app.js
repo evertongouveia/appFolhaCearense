@@ -62,7 +62,7 @@ angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', '
             } else {
                 $rootScope.backButtonPressedOnceToExit = true;
                 window.plugins.toast.showShortBottom(
-                    "Press back button again to exit",
+                    "Precione voltar novamente para sair do aplicativo",
                     function(a) {},
                     function(b) {}
                 );
