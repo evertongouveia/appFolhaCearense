@@ -19,7 +19,7 @@
 		  </label>
 		  <a class="button button-clear" href="#/app/search/{{request}}" nav-clear menu-close>
 			<i class="icon ion-ios-search"></i>
-		  </a>   
+		  </a>
     </ion-header-bar>
     <ion-content>
       <ion-list>
@@ -33,14 +33,14 @@
                   ng-class="{active: isGroupShown(group)}">
             <i class="icon ion-ios-shuffle"></i>
           Categorias
-            <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-empty {{color}}' : 'ion-ios-plus-empty {{color}}'"></i>            
+            <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-empty {{color}}' : 'ion-ios-plus-empty {{color}}'"></i>
         </ion-item>
         <ion-item class="item-accordion" menu-close
-                  ng-show="isGroupShown(group)" 
+                  ng-show="isGroupShown(group)"
                   ng-repeat="category in categories track by $index" ng-if="category.count > 0" href="#/app/categories/{{category.id}}" track>
-          {{category.name}}<span class="badge badge-{{color}}">{{category.count}}</span>
+          {{category.name}}
         </ion-item>
-        </div>	
+        </div>
         <ion-item class="item item-icon-left" nav-clear menu-close href="#/app/bookmarks">
           <i class="icon ion-ios-bookmarks-outline"></i>
           Favoritos

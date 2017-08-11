@@ -26,7 +26,7 @@ angular.module('WordApp.services', [])
   set: function(id) {
    bookmarkCache.put(id, 'bookmarked');
    window.plugins.toast.showShortCenter(
-    "Bookmarked",
+    "Marcado",
     function(a) {},
     function(b) {}
    );
@@ -47,7 +47,7 @@ angular.module('WordApp.services', [])
   remove: function(id) {
    bookmarkCache.remove(id);
    window.plugins.toast.showShortCenter(
-    "Removed",
+    "Removido",
     function(a) {},
     function(b) {}
    );

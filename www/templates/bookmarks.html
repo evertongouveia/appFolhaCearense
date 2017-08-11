@@ -10,7 +10,7 @@
 	  <div class="item item-body list-template">
 	    <img src="{{post.better_featured_image.media_details.sizes.thumbnail.source_url}}">
 		<h4 ng-bind-html="post.title.rendered"></h4>
-		<h6>Postado por <span am-time-ago="post.date"></span> in {{post.pure_taxonomies.categories[0].name}}</h6>
+		<h6>Postado<span am-time-ago="post.date"></span> em {{post.pure_taxonomies.categories[0].name}}</h6>
 	  </div>
 	</div>
   </ion-content>
