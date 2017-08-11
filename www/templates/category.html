@@ -1,7 +1,7 @@
-<ion-view view-title="Categorias">
+<ion-view view-title="Categoria {{post.pure_taxonomies.categories[0].name | uppercase}}">
   <ion-content lazy-scroll>
   <ion-refresher on-refresh="doRefresh()"></ion-refresher>
-  
+
 	<div ng-if="category" class="list card" ng-repeat="post in category track by $index" ng-click="gotoPost(post.id)">
 		<div ng-hide="loadImages == false" class="item item-image">
 			<img image-lazy-src="{{post.better_featured_image.media_details.sizes.medium.source_url}}"  image-lazy-distance-from-bottom-to-load="-100" image-lazy-loader="ios-small">
@@ -13,14 +13,14 @@
 			<h6 am-time-ago="post.date"></h6>
 		</div>
 	</div>
-  
+
   	<div ng-if="!category" class="background-view">
 	  <div class="results">
 		<i class="icon ion-android-arrow-up"></i>
 		<h4 class="no-data">Dados ainda não carregados<br>Puxe para atualizar</h4>
 	  </div>
 	</div>
-	
+
 	<ion-infinite-scroll
 	ng-if="moreDataExists()"
     on-infinite="loadMore()"
