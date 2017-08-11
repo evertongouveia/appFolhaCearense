@@ -25,7 +25,7 @@
 
   <plugin spec="https://github.com/driftyco/ionic-plugins-keyboard.git#011283b" />
   <plugin spec="https://github.com/pushandplay/cordova-plugin-apprate.git#41d40d7" />
-
+  <plugin spec="https://github.com/acasaccia/cordova-socialshare-plugin.git" />v
   <plugin name="cordova-plugin-admobpro" spec="2.19.1" />
   <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
   <plugin name="cordova-plugin-x-toast" spec="2.5.2" />
