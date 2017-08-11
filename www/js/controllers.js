@@ -472,7 +472,8 @@ angular.module('WordApp.controllers', [])
 
     $scope.itemID = $stateParams.categoryId;
 
-    var categoryApi = WORDPRESS_API_URL + 'posts/?filter[cat]=' + $scope.itemID;
+    /*var categoryApi = WORDPRESS_API_URL + 'posts/?filter[cat]=' + $scope.itemID;*/
+	var categoryApi = WORDPRESS_API_URL + 'posts?categories=' + $scope.itemID;
 
     $scope.moreItems = false;
 
