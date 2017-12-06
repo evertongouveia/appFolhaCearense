@@ -135,7 +135,7 @@ angular.module('WordApp.controllers', [])
 
     // Sharing
     $scope.sharePost = function(link) {
-        window.plugins.socialsharing.share('Check this post here: ', null, null, link);
+        window.plugins.socialsharing.share('Confira a materia completa em: ', null, null, link);
     }
 
     // Bookmarking
