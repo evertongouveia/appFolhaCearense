@@ -44,7 +44,7 @@ angular.module('WordApp', ['ionic', 'WordApp.controllers', 'WordApp.services', '
             }
             if (jsonData.additionalData) {
                 if (jsonData.additionalData.actionSelected == "id2" && jsonData.additionalData.postid && jsonData.additionalData.sharelink)
-                    window.plugins.socialsharing.share('Check this post here: ', null, null, jsonData.additionalData.sharelink);
+                    window.plugins.socialsharing.share('Veja essa matéria em: ', null, null, jsonData.additionalData.sharelink);
             }
         }
 
